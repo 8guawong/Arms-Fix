@@ -62,7 +62,7 @@ public Plugin myinfo = {
 	name = "Arms Fix",
 	author = "NomisCZ (-N-)",
 	description = "Arms fix",
-	version = "1.6",
+	version = "1.6.2",
 	url = "http://steamcommunity.com/id/olympic-nomis-p"
 }
 
@@ -76,7 +76,9 @@ public void OnPluginStart() {
 public void OnConfigsExecuted() {
 
 	autoSpawn = autoSpawnCvar.BoolValue;
+}
 
+public void OnMapStart() {
 	PrecacheModels();
 	PrecacheModels(true);
 	PrecacheArms();
